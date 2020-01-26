@@ -135,7 +135,7 @@ Getting API Keys
 
 <hr>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/2/26/Quandl-logo.png" width="150">
+<img src="https://upload.wikimedia.org/wikipedia/en/2/26/Quandl-logo.png" width="200">
 
 1. Register an account on [Quandl.com](https://www.quandl.com/).
 2. Get API Key
