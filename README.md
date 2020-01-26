@@ -1,5 +1,5 @@
 
-<img src="https://cdn.discordapp.com/attachments/670826877715218442/671005755574583299/Drawing_4.jpeg" width="400">
+<img src="https://cdn.discordapp.com/attachments/670826877715218442/671005755574583299/Drawing_4.jpeg" width="500">
 
 
 ------------------------
