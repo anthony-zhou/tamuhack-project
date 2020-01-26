@@ -189,8 +189,8 @@
     	};
 
     	info.update = function (props) {
-    		this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-    			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+    		this._div.innerHTML =  (props ?
+    			'<b>' + props.name + '</b><br />Happiness Index: ' + props.density
     			: 'Hover over a state');
     	};
 
@@ -199,14 +199,14 @@
 
     	// get color depending on population density value
     	function getColor(d) {
-    		return d > 1000 ? '#800026' :
-    				d > 500  ? '#BD0026' :
-    				d > 200  ? '#E31A1C' :
-    				d > 100  ? '#FC4E2A' :
-    				d > 50   ? '#FD8D3C' :
-    				d > 20   ? '#FEB24C' :
-    				d > 10   ? '#FED976' :
-    							'#FFEDA0';
+    		return d > 60 ? '#00a210' :
+    				d > 20  ? '#61bd00' :
+    				d > 10  ? '#ffb800' :
+    				d > 5  ? '#da6f05' :
+    				d > -5   ? '#e67c00' :
+    				d > -10   ? '#e74200' :
+    				d > -20   ? '#d52000' :
+    							'#a30000';
     	}
 
     	function style(feature) {
@@ -261,7 +261,7 @@
     		onEachFeature: onEachFeature
     	}).addTo(map);
 
-    	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+    	map.attributionControl.addAttribution('Data from Twitter and News API');
 
 
     	var legend = L.control({position: 'bottomright'});
