@@ -10,16 +10,21 @@
         <p>Search for a city and find out how happy it is at the moment. Our happiness scores are computed by analyzing recent tweets and videos from a given location, in real time.</p>
         <fieldset>
           <div class="d-table-cell w-100">
-            <input type="text" class="form-control" id="locationText" placeholder="Canada, California, College Station">
+            <input type="text" class="form-control" id="locationText" placeholder="Enter a country, state, or city">
           </div>
           <div class="d-table-cell align-middle">
           <span class="input-group-btn">
             <button id="submit" type="submit" class="btn btn-primary">Go</button>
           </span>
-          </div>
-          <div class="form-group">
-          </div>
         </fieldset>
+        <div class="space"></div>
+        <h3>Stats for: </h3><h3 id="location">College Station</h3>
+        <h5>Expected happiness score: </h5>
+        This measurement represents how the people in this area should feel based on local conditions, which are polled from various news sources and development information.
+        <h5>Perceived happiness score: </h5>
+        This measurement represents how the people in this area are perceived to be feeling by analyzing facial expressions of commoners.
+        <h5>Actual happiness score: </h5>
+        This measurement represents how the people in this area are actually feeling themselves according to the sentiment of their social media posts.
       </div>
 
       <!-- <div id="map"></div>
@@ -296,10 +301,15 @@
 
     	legend.addTo(map);
 
-        $("#submit").on("click", function(event) {
-            // TODO
-            console.log("clicked");
-        });
+      $("fieldset").keypress(function(e) {
+        if (e.which == 13) {
+          $("#submit").click();
+        }
+      });
+
+      $("#submit").on("click", function(event) {
+        $("#location").text($("#locationText").val());
+      });
 
     </script>
 

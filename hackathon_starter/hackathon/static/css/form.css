@@ -14,8 +14,16 @@ html, body {
     padding: 0;
 }
 
-h1 {
+.space {
+  margin-bottom: 15px;
+}
+
+h1, h3 {
   display: inline;
+}
+
+h3, h5 {
+  margin-top: 5%;
 }
 
 .sidebar {
