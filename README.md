@@ -2,6 +2,12 @@
 <img src="https://cdn.discordapp.com/attachments/644915985954111499/671058191877931055/sentiindexmotto.png" width="500">
 
 
+<hr>
+
+
+<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/922/870/datas/original.jpg">
+
+
 ------------------------
 Made with the Django Hackathon Starter Repo [here](https://github.com/DrkSephy/django-hackathon-starter)
 
