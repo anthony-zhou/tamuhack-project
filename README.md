@@ -118,7 +118,7 @@ Getting API Keys
 
 <hr>
 
-<img src="https://cloud.google.com/images/press/logo-cloud.png" width="500">  
+<img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Cloud-Logo-PNG-Image-715x715.png" width="200">  
 
 1. Follow the quickstart for [Natural Language API](https://cloud.google.com/natural-language/docs/quickstart)
 2. After you obtain your credentials you will want to place the json file in your project folder.
