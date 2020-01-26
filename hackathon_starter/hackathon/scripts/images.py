@@ -5,7 +5,7 @@ import json
 
 SEARCH_KEY = 'e7fd0fca21264303b7d7757f3fb0d40b'
 SEARCH_URL = 'https://api.cognitive.microsoft.com'
-SEARCH_COUNT = 3
+SEARCH_COUNT = 1
 RECOG_KEY = '6482c5eb68a0458790882a6485213569'
 RECOG_URL = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect'
 
