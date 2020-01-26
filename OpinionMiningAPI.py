@@ -5,6 +5,11 @@ import coloredlogs
 import news
 from flask import Flask, jsonify
 import os
+import sys
+
+sys.path.insert(1, "/hackathon_starter/hackathon/scripts")
+
+import images
 
 coloredlogs.install('DEBUG')
 
@@ -21,6 +26,7 @@ def get_opinion(lang, lat, long, rad, name):
     news.getNews(name)
     twitterOpinion = sentiment.run_sentiment_analysis('tweets.txt')
     newsOpinion = sentiment.run_sentiment_analysis('news.txt')
+    visual = images.process_image_search(name)
 
     # Check for + or - in front of opinion
     if newsOpinion > 0:
@@ -46,7 +52,8 @@ def get_opinion(lang, lat, long, rad, name):
             'Radius': rad,
             'News Opinion': news,
             'Twitter Opinion': twitterOpinion,
-            'Opinion': twitterOpinion + newsOpinion
+            'Opinion': twitterOpinion + newsOpinion,
+            'Visual' : visual
         }
     ]
 
