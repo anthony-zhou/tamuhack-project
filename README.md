@@ -151,13 +151,18 @@ Getting API Keys
 
 <hr>
 
-<img src="https://logos-download.com/wp-content/uploads/2016/02/Bing-logo.png" width="200">
+<img src="https://logos-download.com/wp-content/uploads/2016/02/Bing-logo.png" width="250">
 
 1. Open [Bing Images](https://www.bing.com/images).
 2. Search for the particular area you're analyzing and download pictures for Microsoft Cognitive Services to apply sentiment analysis
 
-
 <hr>
+
+<img src="https://cdn-images-1.medium.com/fit/t/1600/480/1*NfVUM4Y3im00smTtxY4sZQ.png" width="300">
+
+1. Open [OpenCageData.com](https://opencagedata.com/) for geolocation.
+2. Create and account and acquire API key.
+3. Attach it in OpinionMiningAPI.py in line 22
 
 What's Next?
 ----------------
