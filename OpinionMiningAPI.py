@@ -19,16 +19,23 @@ app = Flask(__name__)
 def get_opinion(lang, lat, long, rad, name):
     search.work(str(lang), str(lat) + ',' + str(long) + ',' + str(int(rad)) + 'mi')
     news.getNews(name)
-    opinion = sentiment.run_sentiment_analysis('tweets.txt')
-    opinion += sentiment.run_sentiment_analysis('news.txt')
+    twitterOpinion = sentiment.run_sentiment_analysis('tweets.txt')
+    newsOpinion = sentiment.run_sentiment_analysis('news.txt')
 
     # Check for + or - in front of opinion
-    if opinion > 0:
-        opinion = "+" + str(opinion)
-    elif opinion < 0:
-        opinion = str(opinion)
+    if newsOpinion > 0:
+        newsOpinion = "+" + str(newsOpinion)
+    elif newsOpinion < 0:
+        newsOpinion = str(newsOpinion)
     else:
-        opinion = str(opinion)
+        newsOpinion = str(newsOpinion)
+        
+    if twitterOpinion > 0:
+        twitterOpinion = "+" + str(twitterOpinion)
+    elif twitterOpinion < 0:
+        twitterOpinion = str(twitterOpinion)
+    else:
+        twitterOpinion = str(twitterOpinion)
 
     # Make dictionary for send
     senti = [
@@ -37,11 +44,13 @@ def get_opinion(lang, lat, long, rad, name):
             'Latitude': lat,
             'Longitude': long,
             'Radius': rad,
-            'Opinion': opinion
+            'News Opinion': news,
+            'Twitter Opinion': twitterOpinion,
+            'Opinion': twitterOpinion + newsOpinion
         }
     ]
 
-    logging.info("Opinion of city is: " + opinion)
+    logging.info("Opinion of city is: " + twitterOpinion + newsOpinion)
     return jsonify(senti)
 
 
