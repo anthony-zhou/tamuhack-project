@@ -101,7 +101,7 @@ To get up and running, simply do the following:
 Getting API Keys
 ----------------
 
-<img src="https://icon2.cleanpng.com/20180319/pgq/kisspng-social-media-institute-for-marine-and-antarctic-st-free-high-quality-twitter-icon-5ab02d627f4897.8603148515214953945214.jpg" width="200">
+<img src="https://sejalseecharam.files.wordpress.com/2018/03/twitter-round-logo-png-transparent-background-7.png" width="200">
 
 1. Register an account on [Twitter.com](http://www.twitter.com/)
 2. Visit the [Yelp for developers page](https://developer.twitter.com/en/apply-for-access)
@@ -118,7 +118,7 @@ Getting API Keys
 
 <hr>
 
-<img src="https://icon2.cleanpng.com/20180415/liq/kisspng-google-cloud-platform-cloud-computing-amazon-web-s-cloud-computing-5ad2ea74d529a6.8569621915237720208731.jpg" width="300">  
+<img src="https://cloud.google.com/images/press/logo-cloud.png" width="500">  
 
 1. Follow the quickstart for [Natural Language API](https://cloud.google.com/natural-language/docs/quickstart)
 2. After you obtain your credentials you will want to place the json file in your project folder.
@@ -132,7 +132,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS=natural_language_creds.json
 
 <hr>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/2/26/Quandl-logo.png" width="300">
+<img src="https://upload.wikimedia.org/wikipedia/en/2/26/Quandl-logo.png" width="150">
 
 1. Register an account on [Quandl.com](https://www.quandl.com/).
 2. Get API Key
@@ -140,7 +140,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS=natural_language_creds.json
 
 <hr>
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/03/Azure-Cognitive-Services-e1489079006258.png" width="100">
+<img src="https://msdnshared.blob.core.windows.net/media/2017/03/Azure-Cognitive-Services-e1489079006258.png" width="200">
 
 1. Register an account on [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/try/cognitive-services/)
 2. Get API key for https://azure.microsoft.com/en-us/try/cognitive-services/ision and for Faces
