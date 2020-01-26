@@ -32,7 +32,7 @@ h3, h5 {
   position: absolute;
   left: 0;
   height: 100vh;
-  box-shadow: 5px 5px 5px lightgray;
+  box-shadow: 10px 10px 10px lightgray;
 }
 
   .pure-material-button-outlined::-moz-focus-inner {
