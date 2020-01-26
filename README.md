@@ -159,7 +159,7 @@ Getting API Keys
 What's Next?
 ----------------
 
-Fully automate choropleth map generation
-Map emotions other than happiness
-Consider business applications
+1. Fully automate choropleth map generation
+2. Map emotions other than happiness
+3. Consider business applications
 
