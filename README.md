@@ -1,5 +1,5 @@
 
-<img src="https://cdn.discordapp.com/attachments/670826877715218442/671005755574583299/Drawing_4.jpeg" width="500">
+<img src="https://cdn.discordapp.com/attachments/644915985954111499/671058191877931055/sentiindexmotto.png" width="500">
 
 
 ------------------------
