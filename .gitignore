@@ -11,3 +11,4 @@ hackathon_starter/_static
 hackathon_starter/_templates
 .coverage
 env/
+.vscode
