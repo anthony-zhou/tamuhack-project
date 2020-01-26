@@ -1,3 +1,5 @@
+<img src="https://cdn.discordapp.com/attachments/670826877715218442/671005755574583299/Drawing_4.jpeg">
+
 
 ------------------------
 Made with the Django Hackathon Starter Repo [here](https://github.com/DrkSephy/django-hackathon-starter)
