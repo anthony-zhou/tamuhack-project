@@ -10,3 +10,4 @@ hackathon_starter/_build
 hackathon_starter/_static
 hackathon_starter/_templates
 .coverage
+env/

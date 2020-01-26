@@ -4,31 +4,264 @@
     {% include 'hackathon/base.html' %}
 
     <body>
+<style>
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100vh;
+        width: 70vw;
+        position: absolute;
+        right: 0;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+html {
+  color: rgb(0, 47, 215);
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  color: rgb(0, 36, 163);
+  font-family: 'Bowlby One SC', sans-serif;
+  font-weight: bold;
+  margin-left: 15%;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  width: 70%;
+  margin: auto;
+}
+input, button {
+  width: 100%;
+  height: 50px !important;
+  margin-bottom: 10px;
+}
+input[type=text] {
+  font-size: 1.5em;
+}
+.sidebar {
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  box-shadow: 5px 5px 5px lightgray;
+}
+.location-form {
+  margin: auto;
+  width: 70%;
+  position: relative;
+}
+/* Material button style */
+  .pure-material-button-outlined {
+      position: relative;
+      display: inline-block;
+      box-sizing: border-box;
+      border: solid 1px;
+      border-color: color: rgb(0, 36, 163);;
+      border-radius: 4px;
+      padding: 0 16px;
+      min-width: 64px;
+      height: 36px;
+      vertical-align: middle;
+      text-align: center;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      color: rgb(0, 36, 163);
+      background-color: transparent;
+      font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 34px;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+  }
+
+  .pure-material-button-outlined::-moz-focus-inner {
+      border: none;
+  }
+
+  /* Overlay */
+  .pure-material-button-outlined::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: currentColor;
+      opacity: 0;
+      transition: opacity 0.2s;
+  }
+
+  /* Ripple */
+  .pure-material-button-outlined::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      padding: 50%;
+      width: 32px;
+      height: 32px;
+      background-color: currentColor;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1) ;
+      transition: opacity 1s, transform 0.5s;
+  }
+
+  /* Hover, Focus */
+  .pure-material-button-outlined:hover::before {
+      opacity: 0.04;
+  }
+
+  .pure-material-button-outlined:focus::before {
+      opacity: 0.12;
+  }
+
+  .pure-material-button-outlined:hover:focus::before {
+      opacity: 0.16;
+  }
+
+  /* Active */
+  .pure-material-button-outlined:active::after {
+      opacity: 0.16;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0s;
+  }
+
+  /* Disabled */
+  .pure-material-button-outlined:disabled {
+      color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+      background-color: transparent;
+      cursor: initial;
+  }
+
+  .pure-material-button-outlined:disabled::before {
+      opacity: 0;
+  }
+
+  .pure-material-button-outlined:disabled::after {
+      opacity: 0;
+  }
+
+</style>
+
+
+
     <div class="container">
-    	{% if user.is_authenticated %}
-        	<h1>Api Example</h1>
-        	<strong>{{ boldmessage }}</strong><br />
-        {% else %}
-        	<h1> Please register/login! </h1>
-        {% endif %}
-    	<br>
-		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				Vestibulum sed metus sed tortor rutrum pharetra vel non erat. Aliquam vitae lectus sapien. Fusce volutpat pharetra enim, at mattis mauris porttitor pharetra. Morbi et dolor dapibus, consequat sem non, mollis risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor eros id elit consectetur, ut sollicitudin felis condimentum. Mauris porta, nulla quis malesuada sagittis, orci lectus luctus tellus, sit amet mollis arcu lectus id sapien. Pellentesque a dignissim ligula. Vestibulum eu semper nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi nisl justo, fermentum eget dignissim at, fermentum ut nisl.
-			</div>
-			<div class="col-sm-6 col-md-6">
-				Vestibulum sed metus sed tortor rutrum pharetra vel non erat. Aliquam vitae lectus sapien. Fusce volutpat pharetra enim, at mattis mauris porttitor pharetra. Morbi et dolor dapibus, consequat sem non, mollis risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor eros id elit consectetur, ut sollicitudin felis condimentum. Mauris porta, nulla quis malesuada sagittis, orci lectus luctus tellus, sit amet mollis arcu lectus id sapien. Pellentesque a dignissim ligula. Vestibulum eu semper nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi nisl justo, fermentum eget dignissim at, fermentum ut nisl.
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis nunc, finibus eu condimentum porttitor, vehicula vitae dui. Cras lacinia augue vel sem ultricies, vel tempor orci sagittis. Suspendisse mattis purus a auctor semper. In tincidunt tincidunt enim, vel aliquet est congue sed. Vestibulum eget lacus in ligula fringilla faucibus quis eu enim. Cras lacinia blandit est, vitae sollicitudin enim venenatis malesuada. Cras egestas eget nibh at volutpat. Ut at consequat urna. Ut pretium felis vitae molestie vestibulum.
-			</div>
-			<div class="col-sm-6 col-md-6">
-				Vestibulum sed metus sed tortor rutrum pharetra vel non erat. Aliquam vitae lectus sapien. Fusce volutpat pharetra enim, at mattis mauris porttitor pharetra. Morbi et dolor dapibus, consequat sem non, mollis risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor eros id elit consectetur, ut sollicitudin felis condimentum. Mauris porta, nulla quis malesuada sagittis, orci lectus luctus tellus, sit amet mollis arcu lectus id sapien. Pellentesque a dignissim ligula. Vestibulum eu semper nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi nisl justo, fermentum eget dignissim at, fermentum ut nisl.
-			</div>
-		</div>
-	</div>
+      <div class="sidebar">
+        <h1>Happiness Index</h1>
+        <p>Search for a city and find out how happy it is at the moment. Our happiness scores are computed by analyzing recent tweets and videos from a given location, in real time.</p>
+        <form class="location-form">
+          <input type="text" placeholder="Paris, London, College Station" id="search-text">
+          <input onclick="handleSearch()" type="button" class="pure-material-button-outlined" value="Search">
+        </form>
+      </div>
+
+      <div id="map"></div>
+    <script>
+
+      var map;
+            var service;
+            var infowindow;
+
+            function initMap() {
+              var sydney = new google.maps.LatLng(-33.867, 151.195);
+
+              infowindow = new google.maps.InfoWindow();
+
+              map = new google.maps.Map(
+                  document.getElementById('map'), {center: sydney, zoom: 15});
+
+              var request = {
+                query: 'Museum of Contemporary Art Australia',
+                fields: ['name', 'geometry'],
+              };
+
+              service = new google.maps.places.PlacesService(map);
+
+              service.findPlaceFromQuery(request, function(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                  for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                  }
+
+                  map.setCenter(results[0].geometry.location);
+                }
+              });
+            }
+
+            function createMarker(place) {
+              var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+              });
+
+              google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(place.name);
+                infowindow.open(map, this);
+              });
+            }
+
+
+
+
+      // // Add circle overlay and bind to marker
+      // var circle = new google.maps.Circle({
+      //   map: map,
+      //   radius: 10000,    // 10 miles in metres
+      //   fillColor: '#AA0000'
+      // });
+      // circle.bindTo('center', marker, 'position');
+
+      // function handleSearch() {
+      //   let searchQuery = document.getElementById("search-text").value;
+      //   let mapsUrl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=" + searchQuery + "&inputtype=textquery&fields=name,geometry&key=AIzaSyD5AaHhIm1ygRegl4VjfGwD0GJ7h1Bv_vA";
+      //   get(mapsUrl).then(function(response) {
+      //     console.log("Success!", response);
+      //   }, function(error) {
+      //     console.error("Failed!", error);
+      //   })
+      // }
+
+      function get(url) {
+        // Return a new promise.
+        return new Promise(function(resolve, reject) {
+          // Do the usual XHR stuff
+          var req = new XMLHttpRequest();
+          req.open('GET', url);
+
+          req.onload = function() {
+            // This is called even on 404 etc
+            // so check the status
+            if (req.status == 200) {
+              // Resolve the promise with the response text
+              resolve(req.response);
+            }
+            else {
+              // Otherwise reject with the status text
+              // which will hopefully be a meaningful error
+              reject(Error(req.statusText));
+            }
+          };
+
+          // Handle network errors
+          req.onerror = function() {
+            reject(Error("Network Error"));
+          };
+
+          // Make the request
+          req.send();
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5AaHhIm1ygRegl4VjfGwD0GJ7h1Bv_vA&libraries=places&callback=initMap"
+    async defer></script>
+  </div>
     </body>
 </html>
