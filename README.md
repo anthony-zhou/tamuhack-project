@@ -95,8 +95,8 @@ To get up and running, simply do the following:
     # Start the API
     $ python3 OpinionMiningAPI.py 
     
-    $ Open a new terminal
-    $ PLACEHOLDER
+    # Open a new terminal, navigate to hackathon_starter directory
+    $ python manage.py runserver
     
 
 <hr>
