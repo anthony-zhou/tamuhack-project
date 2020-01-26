@@ -148,9 +148,10 @@ Getting API Keys
 
 <hr>
 
-<img src="http://thinkpynk.com/wp-content/uploads/2015/04/instagram-logo.png" width="200">
+<img src="https://logos-download.com/wp-content/uploads/2016/02/Bing-logo.png" width="150">
 
-1. Register an account on [Bing Images Placeholder](http://www.instagram.com/).
+1. Open [Bing Images](https://www.bing.com/images).
+2. Search for the particular area you're analyzing and download pictures for Microsoft Cognitive Services to apply sentiment analysis
 
 
 <hr>
