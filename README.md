@@ -123,12 +123,11 @@ Getting API Keys
 1. Follow the quickstart for [Natural Language API](https://cloud.google.com/natural-language/docs/quickstart)
 2. After you obtain your credentials you will want to place the json file in your project folder.
 3. Add environment variables, either in your IDE or on your OS. For Windows it is 
-
 ```
     $ set GOOGLE_APPLICATION_CREDENTIALS=<PATH-TO-JSON>.json
    
     # On Linux it is
-    $ export GOOGLE_APPLICATION_CREDENTIALS=natural_language_creds.json
+    $ export GOOGLE_APPLICATION_CREDENTIALS=<PATH-TO-JSON>.json
 ```
 
 <hr>
