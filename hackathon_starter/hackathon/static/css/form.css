@@ -6,7 +6,8 @@
     position: absolute;
     right: 0;
 }
-  /* Optional: Makes the sample page fill the window. */
+
+/* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
     margin: 0;
@@ -14,50 +15,17 @@ html, body {
 }
 
 h1 {
-  color: rgb(0, 36, 163);
-  font-weight: bold;
-  margin-top: 5%;
-  margin-left: 15%;
+  display: inline;
 }
 
 .sidebar {
+  padding: 2%;
   width: 30vw;
   position: absolute;
   left: 0;
   height: 100vh;
   box-shadow: 5px 5px 5px lightgray;
 }
-.location-form {
-  margin: auto;
-  width: 70%;
-  position: relative;
-}
-
-/* Material button style */
-  .pure-material-button-outlined {
-      position: relative;
-      display: inline-block;
-      box-sizing: border-box;
-      border: solid 1px;
-      border-color: color: rgb(0, 36, 163);;
-      border-radius: 4px;
-      padding: 0 16px;
-      min-width: 64px;
-      height: 36px;
-      vertical-align: middle;
-      text-align: center;
-      text-overflow: ellipsis;
-      text-transform: uppercase;
-      color: rgb(0, 36, 163);
-      background-color: transparent;
-      font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 34px;
-      overflow: hidden;
-      outline: none;
-      cursor: pointer;
-  }
 
   .pure-material-button-outlined::-moz-focus-inner {
       border: none;
