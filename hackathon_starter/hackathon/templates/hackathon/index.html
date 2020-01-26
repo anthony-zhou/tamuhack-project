@@ -149,7 +149,7 @@
     	};
 
     	info.update = function (props) {
-    		this._div.innerHTML =  '<div style="font-size: 20pt; background-color: white; padding: 20px;">' + (props ?
+    		this._div.innerHTML =  '<div style="font-size: 15pt; background-color: white; padding: 20px;">' + (props ?
     			'<b>' + props.COUNTY + '</b><br />Happiness Index: ' + props.OPINION
     			: 'Hover over a state') + '</div>';
     	};
@@ -185,7 +185,7 @@
 
     		layer.setStyle({
     			weight: 5,
-    			color: '#666',
+    			color: '#004580',
     			dashArray: '',
     			fillOpacity: 0.7
     		});
@@ -227,31 +227,6 @@
       }).addTo(map);
 
     	map.attributionControl.addAttribution('Data from Twitter and News API');
-
-
-    	var legend = L.control({position: 'bottomright'});
-
-    	legend.onAdd = function (map) {
-
-    		var div = L.DomUtil.create('div', 'info legend'),
-    			grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-    			labels = [],
-    			from, to;
-
-    		for (var i = 0; i < grades.length; i++) {
-    			from = grades[i];
-    			to = grades[i + 1];
-
-    			labels.push(
-    				'<i style="background:' + getColor(from + 1) + '"></i> ' +
-    				from + (to ? '&ndash;' + to : '+'));
-    		}
-
-    		div.innerHTML = labels.join('<br>');
-    		return div;
-    	};
-
-    	legend.addTo(map);
 
       $("fieldset").keypress(function(e) {
         if (e.which == 13) {
