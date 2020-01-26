@@ -158,7 +158,7 @@ Getting API Keys
 
 <hr>
 
-<img src="https://cdn-images-1.medium.com/fit/t/1600/480/1*NfVUM4Y3im00smTtxY4sZQ.png" width="300">
+<img src="https://miro.medium.com/max/1686/1*rMNB8gw4-aKLaiAVVVIIIQ.jpeg" width="250">
 
 1. Open [OpenCageData.com](https://opencagedata.com/) for geolocation.
 2. Create and account and acquire API key.
