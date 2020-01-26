@@ -6,12 +6,15 @@
     <body>
     <div class="container">
       <div class="sidebar">
-        <h1>Happiness Index</h1>
+        <h1>Senti-Index</h1>
         <p>Search for a city and find out how happy it is at the moment. Our happiness scores are computed by analyzing recent tweets and videos from a given location, in real time.</p>
-        <form class="location-form">
-          <input type="text" placeholder="Paris, London, College Station" id="search-text">
-          <input onclick="handleSearch()" type="button" class="pure-material-button-outlined" value="Search">
-        </form>
+        <fieldset>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="locationText" placeholder="Canada, California, College Station">
+          </div>
+          <button id="submit" type="submit" class="btn btn-primary">Get my data</button>
+        </fieldset>
       </div>
 
       <!-- <div id="map"></div>
@@ -288,12 +291,13 @@
 
     	legend.addTo(map);
 
+        $("#submit").on("click", function(event) {
+            // TODO
+            console.log("clicked");
+        });
 
     </script>
 
-
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5AaHhIm1ygRegl4VjfGwD0GJ7h1Bv_vA&libraries=places&callback=initMap" -->
-    async defer></script>
   </div>
     </body>
 </html>
