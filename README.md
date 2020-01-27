@@ -110,7 +110,7 @@ To get up and running, simply do the following:
 Getting API Keys
 ----------------
 
-<img src="https://sejalseecharam.files.wordpress.com/2018/03/twitter-round-logo-png-transparent-background-7.png" width="200">
+<img src="https://sejalseecharam.files.wordpress.com/2018/03/twitter-round-logo-png-transparent-background-7.png" width="175">
 
 1. Register an account on [Twitter.com](http://www.twitter.com/)
 2. Visit the [Yelp for developers page](https://developer.twitter.com/en/apply-for-access)
